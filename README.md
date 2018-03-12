@@ -35,3 +35,4 @@ If you don't have discord you can contact us via [email](mailto:codemc.org@gmail
 
 ## FAQ and Wiki
 Let's get started: [open wiki](https://github.com/CodeMC/Documentation/wiki)
+This is not affliated with the [CodeMC Network](https://codemc.network) created by CodeCo.
