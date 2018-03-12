@@ -4,6 +4,27 @@ The how-to-use documentation of our jenkins/nexus instance.
 Jenkins CI: [https://ci.codemc.org](https://ci.codemc.org/)<br>
 Maven repository: [https://repo.codemc.org](https://repo.codemc.org/)
 
+Maven
+```xml
+    <repositories>
+        <!-- CodeMc -->
+        <repository>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.org/repository/maven-public/</url>
+        </repository>
+    </repositories>
+```
+
+Gradle
+```gradle
+    repositories {
+        maven {
+            name = 'codemc-repo'
+            url = 'https://repo.codemc.org/repository/maven-public/'
+        }
+    }
+```
+
 ## About
 Welcome to CodeMC, a public jenkins/maven repository for open source minecraft projects.
 If you want to add your build job to our instance please contact us, we love to support project!
