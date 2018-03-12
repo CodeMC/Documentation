@@ -1,5 +1,5 @@
 # Documentation
-The how-to-use documentation of or jenkins/nexus instance.
+The how-to-use documentation of our jenkins/nexus instance.
 
 Jenkins CI: [https//ci.codemc.org](https//ci.codemc.org)<br>
 Maven repository: [https//repo.codemc.org](https//repo.codemc.org)
