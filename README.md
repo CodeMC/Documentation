@@ -35,3 +35,6 @@ If you don't have Discord you can contact us via [email](mailto:codemc.org@gmail
 
 ## FAQ and Wiki
 To get more information about the service, you can click [here](https://github.com/CodeMC/Documentation/wiki)
+
+## Sponsor
+Our infrastructure is sponsored by [FastVM](http://www.fastvm.io), do you need a cheap but powerful vps? Check them now!
