@@ -1,8 +1,8 @@
 # Documentation
 A repository explaining how to make use of our Jenkins and Nexus instances.
 
-Jenkins CI: [https://ci.codemc.org](https://ci.codemc.org/)<br>
-Maven repository: [https://repo.codemc.org](https://repo.codemc.org/)
+Jenkins CI: [https://ci.codemc.io](https://ci.codemc.io/)<br>
+Maven repository: [https://repo.codemc.io](https://repo.codemc.io/)
 
 #### Maven setup
 ```xml
@@ -10,7 +10,7 @@ Maven repository: [https://repo.codemc.org](https://repo.codemc.org/)
     <!-- CodeMC -->
     <repository>
         <id>codemc-repo</id>
-        <url>https://repo.codemc.org/repository/maven-public/</url>
+        <url>https://repo.codemc.io/repository/maven-public/</url>
     </repository>
 </repositories>
 ```
@@ -20,7 +20,7 @@ Maven repository: [https://repo.codemc.org](https://repo.codemc.org/)
 repositories {
     maven {
         name = 'codemc-repo'
-        url = 'https://repo.codemc.org/repository/maven-public/'
+        url = 'https://repo.codemc.io/repository/maven-public/'
     }
 }
 ```
@@ -31,7 +31,6 @@ If you want to add your build job to our instance please [contact us](#support),
 
 ## Support
 If you need help or you have a question, feel free to join our Discord server! [![Discord](https://img.shields.io/discord/405915656039694336.svg?style=flat-square)](https://discord.gg/AGcFMu6)<br>
-If you don't have Discord, you can also contact us via [email](mailto:codemc.org@gmail.com).
 
 ## FAQ/Wiki
 To learn more about the service, you can click [here](https://github.com/CodeMC/Documentation/wiki) to read the wiki.
