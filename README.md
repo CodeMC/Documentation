@@ -32,8 +32,8 @@ repositories {
 Welcome to CodeMC, a public Jenkins instance and Maven repository for open source Minecraft projects.
 If you want to add your build job to our instance please [contact us](#support), we'd love to support your project(s)!
 
-## Support [![badge]][discord]
-If you need help or you have a question, feel free to join our Discord server!
+## Support ![badge]
+If you need help or you have a question, feel free to join our [Discord server][discord]!
 
 ## FAQ/Wiki
 To learn more about the service, you can click [here](https://github.com/CodeMC/Documentation/wiki) to read the wiki.
