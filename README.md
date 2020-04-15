@@ -1,3 +1,6 @@
+[badge]: https://img.shields.io/discord/405915656039694336?color=7289DA&label=Discord&logo=discord
+[discord]: https://discord.gg/AGcFMu6
+
 # Documentation
 A repository explaining how to make use of our Jenkins and Nexus instances.
 
@@ -29,8 +32,8 @@ repositories {
 Welcome to CodeMC, a public Jenkins instance and Maven repository for open source Minecraft projects.
 If you want to add your build job to our instance please [contact us](#support), we'd love to support your project(s)!
 
-## Support
-If you need help or you have a question, feel free to join our Discord server! [![Discord](https://img.shields.io/discord/405915656039694336.svg?style=flat-square)](https://discord.gg/AGcFMu6)<br>
+## [Support ![badge]](https://discord.gg/AGcFMu6)
+If you need help or you have a question, feel free to join our Discord server!
 
 ## FAQ/Wiki
 To learn more about the service, you can click [here](https://github.com/CodeMC/Documentation/wiki) to read the wiki.
