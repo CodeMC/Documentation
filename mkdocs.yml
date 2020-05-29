@@ -1,4 +1,4 @@
-site_name: 'CI-Documentation'
+site_name: 'Documentation'
 site_description: 'Wiki about the CI of CodeMC'
 site_author: 'Gabrielle C. & Andre_601'
 
@@ -7,8 +7,8 @@ copyright: |
   
 docs_dir: docs/
 
-repo_name: CodeMC/CI-Documentation
-repo_url: https://github.com/CodeMC/CI-Documentation
+repo_name: CodeMC/Documentation
+repo_url: https://github.com/CodeMC/Documentation
 
 nav:
   - Welcome: index.md
@@ -38,7 +38,7 @@ extra_css:
 extra:
   social:
     - icon: 'fontawesome/brands/github'
-      link: 'https://github.com/CodeMC/CI-Documentation'
+      link: 'https://github.com/CodeMC/Documentation'
     - icon: 'fontawesome/brands/discord'
       link: 'https://discord.gg/AGcFMu6'
 
