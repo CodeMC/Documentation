@@ -25,7 +25,7 @@ jobs:
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git remote add gh-token "https://github.com/CodeMC/CI-Documentation.git"
+        git remote add gh-token "https://github.com/CodeMC/Documentation.git"
         git fetch gh-token && git fetch gh-token gh-pages:gh-pages
         python -m mkdocs gh-deploy --clean -m "Deploying Wiki to GitHub Pages (${GITHUB_SHA:0:7})" --remote-name gh-token
         git push gh-token gh-pages
