@@ -13,11 +13,11 @@ repo_url: https://github.com/CodeMC/Documentation
 nav:
   - Welcome: index.md
   - FAQ: faq.md
-  - GitHub:
-    - GitHub: github/index.md
-    - Integrating into GitHub: github/github-integration.md
-    - Creating a Gradle Job: github/gradle.md
-    - Creating a Maven Job: github/maven.md
+  - Jenkins Docs:
+    - Jenkins Docs: jenkins/index.md
+    - Integrating into GitHub: jenkins/github-integration.md
+    - Creating a Gradle Job: jenkins/gradle.md
+    - Creating a Maven Job: jenkins/maven.md
 
 theme:
   name: 'material'
