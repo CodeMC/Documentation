@@ -1,3 +1,5 @@
+[Discord]: https://discord.gg/AGcFMu6
+
 # Creating a Maven Job
 This page explains you step by step how to create a Build job on CodeMC for a Maven Project.  
 For how to add a Gradle project, check the [Creating a Gradle Job page](../gradle).
