@@ -1,0 +1,60 @@
+site_name: 'CI-Documentation'
+site_description: 'Wiki about the CI of CodeMC'
+site_author: 'Gabrielle C. & Andre_601'
+
+copyright: |
+  &copy; <a href="https://ci.codemc.io">CodeMC.io</a>
+  
+docs_dir: docs/
+
+repo_name: CodeMC/CI-Documentation
+repo_url: https://github.com/CodeMC/CI-Documentation
+
+nav:
+  - Welcome: index.md
+  - FAQ: faq.md
+  - GitHub:
+    - GitHub: github/index.md
+    - Integrating into GitHub: github/github-integration.md
+    - Creating a Gradle Job: github/gradle.md
+    - Creating a Maven Job: github/maven.md
+
+theme:
+  name: 'material'
+  logo: 'assets/img/CodeMCLogoV2Full.png'
+  favicon: 'assets/img/CodeMCLogoV2.png'
+  palette:
+    scheme: slate
+    primary: cyan
+    accent: blue
+  features:
+  - tabs
+  icon:
+    repo: fontawesome/brands/github-square
+
+extra_css:
+  - 'assets/css/styling.css'
+
+extra:
+  social:
+    - icon: 'fontawesome/brands/github'
+      link: 'https://github.com/CodeMC/CI-Documentation'
+    - icon: 'fontawesome/brands/discord'
+      link: 'https://discord.gg/AGcFMu6'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      repo_url_shorthand: true
+      social_url_shorthand: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

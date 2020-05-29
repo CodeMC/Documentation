@@ -1,0 +1,13 @@
+:root > * {
+  --md-primary-fg-color: #0172ba;
+}
+
+.md-header-nav__button.md-logo img {
+  width: 6.25rem;
+  height: auto;
+}
+
+.md-nav__title > .md-nav__button.md-logo img {
+  width: 6.25rem;
+  height: auto;
+}
