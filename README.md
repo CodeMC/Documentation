@@ -4,6 +4,8 @@
 # Documentation
 A repository explaining how to make use of our Jenkins and Nexus instances.
 
+View documentation: [https://docs.codemc.io/](https://docs.codemc.io/)
+
 Jenkins CI: [https://ci.codemc.io](https://ci.codemc.io/)<br>
 Maven repository: [https://repo.codemc.io](https://repo.codemc.io/)
 
@@ -34,6 +36,3 @@ If you want to add your build job to our instance please [contact us](#support),
 
 ## Support ![badge]
 If you need help or you have a question, feel free to join our [Discord server][discord]!
-
-## FAQ/Wiki
-To learn more about the service, you can click [here](https://github.com/CodeMC/Documentation/wiki) to read the wiki.
