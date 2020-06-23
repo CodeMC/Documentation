@@ -30,11 +30,12 @@ When you want CodeMC to automatically build artefacts once you push commits to y
 
 1. Go to https://github.com/organizations/:organisation/settings/hooks (Replace `:organisation` with the name of your organisation).
 2. Click `Add webhook`
-3. Put https://ci.codemc.io/github-webhook as the Payload URL.
+3. Put https://ci.codemc.io/github-webhook/ as the Payload URL.
 4. Under `Which events would you like to trigger this webhook?` select `Let me select individual events` and enable the below options:
     - `Pull requests`
     - `Pushes`
     - `Repositories`
+    
     !!! info "Note"
         You can also leave the setting on "Just the `push` event" if you only want pushes to trigger it
 5. Click `Add Webhook`
@@ -44,11 +45,12 @@ When you want CodeMC to automatically build artefacts once you push commits to y
 
 1. Go to https://github.com/:user/:repo/settings/hooks (Replace `:user` with your user/organisation name and `:repo` with the repository name).
 2. Click `Add webhook`
-3. Put https://ci.codemc.io/github-webhook as the Payload URL.
+3. Put https://ci.codemc.io/github-webhook/ as the Payload URL.
 4. Under `Which events would you like to trigger this webhook?` select `Let me select individual events` and enable the below options:
     - `Pull requests`
     - `Pushes`
     - `Repositories`
+    
     !!! info "Note"
         You can also leave the setting on "Just the `push` event" if you only want pushes to trigger it
 5. Click `Add Webhook`
