@@ -6,7 +6,7 @@
 # FAQ
 Commonly asked questions about CodeMC and related projects.
 
-## What is the Maven repository?
+## What is the NMS Maven Repository?
 
 !!! note
     Replace `{version}` with whatever version you want to use.  
