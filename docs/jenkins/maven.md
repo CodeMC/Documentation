@@ -10,7 +10,7 @@ For how to add a Gradle project, check the [Creating a Gradle Job page](../gradl
     In order to create a job will you need to be added to the Site first, if you haven't already.  
     To get added, join the [Discord Server][Discord] and follow the instructions in the `#info` channel.
 
-1. Go to https://ci.codemc.io/view/Author/job/:user/newJob (Replace `:user` with your user/organisation name)
+1. Go to https://ci.codemc.io/job/:user/newJob (Replace `:user` with your user/organisation name)
 2. Enter the job name in the top text box, and select `Maven project`. Click the `OK` button at the bottom of the page.
 3. Your job is now created! You should be redirected to the configuration page.
 
