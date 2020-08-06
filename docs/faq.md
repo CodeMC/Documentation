@@ -6,6 +6,43 @@
 # FAQ
 Commonly asked questions about CodeMC and related projects.
 
+## What is the NMS Maven Repository?
+
+!!! note
+    Replace `{version}` with whatever version you want to use.  
+    The version has the same syntax as the version of the Spigot-API (e.g. `1.15.2-R0.1-SNAPSHOT`)
+
+Add the following parts to your `pom.xml` when using Maven:  
+```xml
+<repositories>
+    <repository>
+        <id>nms-repo</id>
+        <url>https://repo.codemc.io/repository/nms/</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>org.spigotmc</groupId>
+        <artifactId>spigot</artifactId>
+        <version>{version}</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
+```
+
+Add this to your `build.gradle` file when using Gradle.
+```groovy
+repositories{
+    maven{ url = "https://repo.codemc.io/repository/nms/" }
+}
+
+dependencies{
+    compileOnly(group: 'org.spigotmc', name: 'spigot', version: '{version}')
+}
+```
+
+----
 ## How can my projec(s) be added to CodeMC?
 To get your project(s) added, join the [CodeMC Discord][Discord] and contact an Administrator.  
 When doing so, make sure to follow those basic guides:
