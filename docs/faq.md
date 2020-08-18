@@ -63,7 +63,7 @@ You need to make sure to have granted access to your organisation when you logge
 To check this, head over to your [Connection Settings] on GitHub and make sure to have granted the [CodeMC application] access to your account and organisations.
 
 ----
-## How can I deploy my maven artefacts to the CodeMC repository?
+## How can I deploy my maven artifacts to the CodeMC repository?
 When you use Maven can you add the following settings to your `pom.xml`  
 ```xml
 <distributionManagement>
