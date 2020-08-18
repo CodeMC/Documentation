@@ -1,4 +1,4 @@
-[Discord]: 
+[Discord]: https://discord.gg/AGcFMu6
 [Connection Settings]: https://github.com/settings/applications
 [CodeMC application]: https://github.com/settings/connections/applications/2debe3b061b244423bf5
 
