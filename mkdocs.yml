@@ -28,7 +28,7 @@ theme:
     primary: cyan
     accent: blue
   features:
-  - tabs
+  - navigation.tabs
   icon:
     repo: fontawesome/brands/github-square
 
