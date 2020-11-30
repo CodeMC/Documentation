@@ -38,6 +38,7 @@ When you want CodeMC to automatically build artefacts once you push commits to y
     
     !!! info "Note"
         You can also leave the setting on "Just the `push` event" if you only want pushes to trigger it
+
 5. Click `Add Webhook`
 6. You're done!
 
@@ -53,5 +54,6 @@ When you want CodeMC to automatically build artefacts once you push commits to y
     
     !!! info "Note"
         You can also leave the setting on "Just the `push` event" if you only want pushes to trigger it
+
 5. Click `Add Webhook`
 6. You're done!
