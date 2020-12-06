@@ -20,3 +20,11 @@ To get started, make sure to have the following information added to your `pom.x
   </snapshotRepository>
 </distributionManagement>
 ```
+
+
+!!! info "Hint"
+    You may also be able to deploy your project using the command line alone.  
+    To do this, execute the following command:  
+    ```
+    clean install org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=codemc-snapshots::default::https://repo.codemc.io/repository/maven-snapshots/ -DaltReleaseDeploymentRepository=codemc-releases::default::https://repo.codemc.io/repository/maven-releases/
+    ```
