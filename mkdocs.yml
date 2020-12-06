@@ -18,6 +18,7 @@ nav:
     - Integrating into GitHub: jenkins/github-integration.md
     - Creating a Gradle Job: jenkins/gradle.md
     - Creating a Maven Job: jenkins/maven.md
+    - Deploy to the CodeMC Nexus: jenkins/deploy.md
 
 theme:
   name: 'material'
