@@ -13,7 +13,7 @@ Before you can publish your project to the nexus will you need to make a few fir
 To get started, first go to your project's Jenkins Page on CodeMC (https://ci.codemc.io/job/:user/job/:project) and login to your account if you didn't already.
 
 ### Configure Project
-On the project's page, click *:fa-solid-cog: Configure* to go to the project settings.  
+On the project's page, click *:fontawesome-solid-cog: Configure* to go to the project settings.  
 From there, scroll down to the *Build Enviroment* section and click on *Use secret text(s) or file(s)*.
 
 A new section called *Bindings* should now open. Click the *Add* button and select *Username and password (separated)*.  
