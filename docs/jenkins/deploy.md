@@ -30,15 +30,14 @@ Continue to the *Build* section.
 !!! info "No Build step set?"
     If you don't have a Build set create one as follows:
     
-    **Maven**:
+    === ":brands-maven: Maven"
+        1. Change *Maven Version* to that of your project's used and set *Root POM* to the path to your pom.xml file (Usually just `pom.xml`).
+        2. In the *Goals and options* field, put `clean install deploy`
     
-    1. Leave *Maven Version* to that of your maven used and set *Root POM* to the path to your pom.xml file (Usually just `pom.xml`).
-    2. In the *Goals and options* field, put `clean install deploy`
-    
-    **Gradle**
-    1. Click *Add build step* and select *Invoke Gradle script*.
-    2. Click *Use Gradle Wrapper* and make sure that *Make gradlew executable* is checked.
-    3. In the *Tasks* field put `clean publish`
+    === ":brands-gradle: Gradle"
+        1. Click *Add build step* and select *Invoke Gradle script*.
+        2. Click *Use Gradle Wrapper* and make sure that *Make gradlew executable* is checked.
+        3. In the *Tasks* field put `clean publish`
 
 ----
 ## Maven
