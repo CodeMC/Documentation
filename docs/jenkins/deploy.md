@@ -71,7 +71,7 @@ How you configure your project depends on whether you use the Groovy or the Kotl
 !!! info "Gradle"
     === ":brands-gradle: build.gradle"
         [:fontawesome-solid-file-code: Source](https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:complete_example)  
-        ```gradle
+        ```groovy
         plugins {
             id 'maven-publish'
         }
