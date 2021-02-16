@@ -2,11 +2,11 @@
 [source_gradle_kts]: https://github.com/Minecrell/ServerListPlus/blob/ef8cda91cc73a4599c359640c4e97dde9b699649/build.gradle.kts#L146-L178
 
 # Deploying to the CodeMC Nexus
-CodeMC offers you a way to upload your API or project to a nexus, so that other developers can integrate it into their own projects to use.  
+CodeMC offers you a way to upload your API or project to a Nexus Repository, so that other developers can integrate it into their own projects to use.  
 This page here will explain how you can achieve this.
 
 !!! info "Important"
-    You can only deploy your project to the nexus from within your Jenkins Project.  
+    You can only deploy your project to the Nexus from within your Jenkins Project.  
     If you try to deploy from outside of it will you receive an "Unauthorized" exception.
 
 ## Prerequisites
@@ -21,7 +21,7 @@ From there, scroll down to the *Build Enviroment* section and click on *Use secr
 
 A new section called *Bindings* should now open. Click the *Add* button and select *Username and password (separated)*.  
 You should now see two text fields called *Username Variable* and *Password Variable* respectively. Enter the names for the User and Password Variable that you want to use.  
-Common examples to use are `ORG_GRADLE_PROJECT_mavenUsername` and `ORG_GRADLE_PROJECT_mavenPassword`
+You can name them whatever you want, but remember to note them down somewhere to use later.
 
 !!! warning "Note"
     Do NOT enter your actual username and password in those fields. They are only used to define the Enviroment Variables used on Jenkins.
@@ -44,12 +44,7 @@ Continue to the *Build* section.
 
 ----
 ## Configure Maven/Gradle
-After you've setup your Jenkins Project properly can you now move on to your `pom.xml`, `build.gradle` or `build.gradle.kts` file, to configure the publishing for it.
-
-## Maven
-After you've setup your Jenkins Project properly can you now continue to configure your Maven project.
-
-In your Project's `pom.xml` can you add the following info:
+After you've setup your Jenkins Project properly can you now continue to add the right information into your `pom.xml`, `build.gradle` or `build.gradle.kts` file.
 
 !!! info "File Setup"
     === ":brands-maven: pom.xml"
@@ -92,8 +87,10 @@ In your Project's `pom.xml` can you add the following info:
                     def snapshotUrl = "https://repo.codemc.io/repository/maven-snapshots/"
                     def releaseUrl = "https://repo.codemc.io/repository/maven-releases/"
                     
+                    // You can use any other check here to set what URL should be used.
                     url = project.version.endsWith("SNAPSHOT") ? snapshotUrl : releaseUrl
                     
+                    // ORG_GRADLE_PROJECT_mavenUsername and ORG_GRADLE_PROJECT_mavenPassword are the enviroments you defined before.
                     def mavenUsername = System.getenv("ORG_GRADLE_PROJECT_mavenUsername") ? System.getenv("ORG_GRADLE_PROJECT_mavenUsername") : null
                     def mavenPassword = System.getenv("ORG_GRADLE_PROJECT_mavenPassword") ? System.getenv("ORG_GRADLE_PROJECT_mavenPassword") : null
                     
@@ -149,5 +146,5 @@ In your Project's `pom.xml` can you add the following info:
         }
         ```
 
-After you finished those steps will you only need to push these changes to your repo and trigger a build on CodeMC.  
-See the [GitHub Interation](../github-integration) on how to do this.
+Once finished can you now push the changes to your repository and trigger a build on CodeMC to get your project published to the repository.  
+See the [GitHub Interation](../github-integration) page on how to do this automatically.
