@@ -53,18 +53,18 @@ In your Project's `pom.xml` can you add the following info:
 
 !!! info "File Setup"
     === ":brands-maven: pom.xml"
-    ```xml
-    <distributionManagement>
-      <repository>
-        <id>codemc-releases</id>
-        <url>https://repo.codemc.io/repository/maven-releases/</url>
-      </repository>
-      <snapshotRepository>
-        <id>codemc-snapshots</id>
-        <url>https://repo.codemc.io/repository/maven-snapshots/</url>
-      </snapshotRepository>
-    </distributionManagement>
-    ```
+        ```xml
+        <distributionManagement>
+          <repository>
+            <id>codemc-releases</id>
+            <url>https://repo.codemc.io/repository/maven-releases/</url>
+          </repository>
+          <snapshotRepository>
+            <id>codemc-snapshots</id>
+            <url>https://repo.codemc.io/repository/maven-snapshots/</url>
+          </snapshotRepository>
+        </distributionManagement>
+        ```
     
     === ":brands-gradle: build.gradle"
         [:fontawesome-solid-file-code: Source][source_gradle]  
