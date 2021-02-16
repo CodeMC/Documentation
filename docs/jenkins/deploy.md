@@ -1,3 +1,6 @@
+[source_gradle]: https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:complete_example
+[source_gradle_kts]: https://github.com/Minecrell/ServerListPlus/blob/ef8cda91cc73a4599c359640c4e97dde9b699649/build.gradle.kts#L146-L178
+
 # Deploying to the CodeMC Nexus
 CodeMC offers you a way to upload your API or project to a nexus, so that other developers can integrate it into their own projects to use.  
 This page here will explain how you can achieve this.
@@ -40,12 +43,16 @@ Continue to the *Build* section.
         3. In the *Tasks* field put `clean publish`
 
 ----
+## Configure Maven/Gradle
+After you've setup your Jenkins Project properly can you now move on to your `pom.xml`, `build.gradle` or `build.gradle.kts` file, to configure the publishing for it.
+
 ## Maven
 After you've setup your Jenkins Project properly can you now continue to configure your Maven project.
 
 In your Project's `pom.xml` can you add the following info:
 
-!!! info ":brands-maven: pom.xml"
+!!! info "File Setup"
+    === ":brands-maven: pom.xml"
     ```xml
     <distributionManagement>
       <repository>
@@ -58,18 +65,9 @@ In your Project's `pom.xml` can you add the following info:
       </snapshotRepository>
     </distributionManagement>
     ```
-
-After that can you just publish it to your GitHub and trigger a build on CodeMC.
-
-----
-## Gradle
-After you've setup your Jenkins Project properly can you now continue to configure your Gradle project.
-
-How you configure your project depends on whether you use the Groovy or the Kotlin distribution of Gradle.
-
-!!! info "Gradle"
+    
     === ":brands-gradle: build.gradle"
-        [:fontawesome-solid-file-code: Source](https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:complete_example)  
+        [:fontawesome-solid-file-code: Source][source_gradle]  
         ```groovy
         plugins {
             id 'maven-publish'
@@ -111,7 +109,7 @@ How you configure your project depends on whether you use the Groovy or the Kotl
         ```
     
     === ":brands-kotlin: build.gradle.kts"
-        [:fontawesome-solid-file-code: Source](https://github.com/Minecrell/ServerListPlus/blob/master/build.gradle.kts#L146-L178)  
+        [:fontawesome-solid-file-code: Source][source_gradle_kts]  
         ```kotlin
         plugins {
             'maven-publish'
@@ -150,3 +148,6 @@ How you configure your project depends on whether you use the Groovy or the Kotl
             }
         }
         ```
+
+After you finished those steps will you only need to push these changes to your repo and trigger a build on CodeMC.  
+See the [GitHub Interation](../github-integration) on how to do this.
