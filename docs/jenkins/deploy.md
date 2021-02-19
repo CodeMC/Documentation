@@ -147,4 +147,4 @@ After you've setup your Jenkins Project properly can you now continue to add the
         ```
 
 Once finished can you now push the changes to your repository and trigger a build on CodeMC to get your project published to the repository.  
-See the [GitHub Interation](../github-integration) page on how to do this automatically.
+See the [GitHub Integration](../github-integration) page on how to do this automatically.
