@@ -9,8 +9,8 @@ Commonly asked questions about CodeMC and related projects.
 ## What is the NMS Maven Repository?
 
 !!! note
-    Replace `{version}` with whatever version you want to use.  
-    The version has the same syntax as the version of the Spigot-API (e.g. `1.15.2-R0.1-SNAPSHOT`)
+    Below, replace `{version}` with the version number you wish to use.  
+    The version syntax is similar to the Spigot API (e.g. `1.15.2-R0.1-SNAPSHOT`)
 
 Add the following parts to your `pom.xml` when using Maven:  
 ```xml
@@ -31,7 +31,7 @@ Add the following parts to your `pom.xml` when using Maven:
 </dependencies>
 ```
 
-Add this to your `build.gradle` file when using Gradle.
+Add this to your `build.gradle` file when using Gradle:
 ```groovy
 repositories{
     maven{ url = "https://repo.codemc.io/repository/nms/" }
@@ -43,19 +43,20 @@ dependencies{
 ```
 
 ----
-## How can my projec(s) be added to CodeMC?
+## How can my project(s) be added to CodeMC?
 To get your project(s) added, join the [CodeMC Discord][Discord] and contact an Administrator.  
 When doing so, make sure to follow those basic guides:
 
 - Provide your GitHub username. GitHub is the main system to login on the site.
-- You need to have at least one open source project (Private repositories don't count).
+- You need to have at least one open-source project (private repositories don't count).
 
 Please stay patient when requesting to be added as we might have other things to do.
 
 ----
 ## My project isn't about Minecraft. Can I still be added?
-Yes, you can.  
-CodeMC accept nearly every open source project, as long as it is Java-based (And follows the points in the above FAQ entry).
+Yes, you can.
+
+CodeMC accepts nearly every open-source project, as long as it is Java-based (and follows the points in the above FAQ entry).
 
 ----
 ## I can't access any job configuration or folders in my Organisation. What is happening?
@@ -64,7 +65,7 @@ To check this, head over to your [Connection Settings] on GitHub and make sure t
 
 ----
 ## How can I deploy my maven artifacts to the CodeMC repository?
-When you use Maven can you add the following settings to your `pom.xml`  
+When using Maven, you can add the following settings to your `pom.xml`  
 ```xml
 <distributionManagement>
     <repository>
@@ -78,12 +79,12 @@ When you use Maven can you add the following settings to your `pom.xml`
 </distributionManagement>
 ```
 
-Alternatively can you also execute an upload to the repository through the command line.  
+Alternatively, can you also execute an upload to the repository through the command line.  
 Just execute the following maven command for that:
 ```
 clean install org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=codemc-snapshots::default::https://repo.codemc.io/repository/maven-snapshots/ -DaltReleaseDeploymentRepository=codemc-releases::default::https://repo.codemc.io/repository/maven-releases/
 ```
 
 !!! warning "Important"
-    Make sure to have the right cridentials for the deploy to be successful!  
-    Ask a staff member on the [Discord] for support, when you're lost.
+    Make sure to have the right credentials for the deploy to be successful!  
+    If you're lost, ask a staff member on the [Discord] for support.
