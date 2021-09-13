@@ -30,8 +30,8 @@ A tutorial for this can be found [here](../github-integration#automatically-buil
 1. Click on `Poll SCM`
 2. Put `*/5 * * * *` in the large text field, to make CodeMC check your GitHub project every 5 minutes.
 
-### Build Enviroment (Optional)
-It's recommendet to enable `Add timestamps to the Console Output`
+### Build Environment (Optional)
+It's recommended to enable `Add timestamps to the Console Output`
 
 ### Build
 
