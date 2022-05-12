@@ -4,6 +4,7 @@
 
 
 # FAQ
+
 Commonly asked questions about CodeMC and related projects.
 
 ## What is the NMS Maven Repository?
@@ -44,16 +45,13 @@ dependencies{
 
 ----
 ## How can my project(s) be added to CodeMC?
-To get your project(s) added, join the [CodeMC Discord][Discord] and contact an Administrator.  
-When doing so, make sure to follow those basic guides:
 
-- Provide your GitHub username. GitHub is the main system to login on the site.
-- You need to have at least one open-source project (private repositories don't count).
-
+To get your project(s) added, join the [CodeMC Discord][Discord] and read the pinned message in the `#request-access` channel.  
 Please stay patient when requesting to be added as we might have other things to do.
 
 ----
 ## My project isn't about Minecraft. Can I still be added?
+
 Yes, you can.
 
 CodeMC accepts nearly every open-source project, as long as it is Java-based (and follows the points in the above FAQ entry).
@@ -65,6 +63,7 @@ To check this, head over to your [Connection Settings] on GitHub and make sure t
 
 ----
 ## How can I deploy my maven artifacts to the CodeMC repository?
+
 When using Maven, you can add the following settings to your `pom.xml`  
 ```xml
 <distributionManagement>
