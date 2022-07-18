@@ -35,6 +35,9 @@ It's recommended to enable `Add timestamps to the Console Output`
 
 ### Build
 
+!!! warning "Important"
+    In order to build a maven project using JDK 8 you will have to use a [workaround](https://github.com/CodeMC/Documentation/blob/master/docs/faq.md#how-to-build-a-jdk-8-maven-project)
+
 1. Write the path to your pom.xml in the `Root POM` field.
 2. In the `Goals and options` field, set your default maven goals.
     - If you want to deploy the artifacts to the CodeMC repository will you need to follow the steps explained in the [FAQ](../../faq#how-can-i-deploy-my-maven-artefacts-to-the-codemc-repository)
