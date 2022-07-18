@@ -87,3 +87,11 @@ clean install org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSna
 !!! warning "Important"
     Make sure to have the right credentials for the deploy to be successful!  
     If you're lost, ask a staff member on the [Discord] for support.
+
+----
+## How to build a JDK 8 Maven project?
+
+Jenkins dropped the official support for JDK 8 Maven builds, the following workaround is required:
+- Set the JDK version to JDK 11
+- Add the following maven goal to the commandline:
+`io.codemc.maven.plugins.toolchain:codemc-toolchain-selector:0.0.2-SNAPSHOT:select`
