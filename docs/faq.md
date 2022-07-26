@@ -64,34 +64,4 @@ To check this, head over to your [Connection Settings] on GitHub and make sure t
 ----
 ## How can I deploy my maven artifacts to the CodeMC repository?
 
-When using Maven, you can add the following settings to your `pom.xml`  
-```xml
-<distributionManagement>
-    <repository>
-        <id>codemc-releases</id>
-        <url>https://repo.codemc.io/repository/maven-releases/</url>
-    </repository>
-    <snapshotRepository>
-        <id>codemc-snapshots</id>
-        <url>https://repo.codemc.io/repository/maven-snapshots/</url>
-    </snapshotRepository>
-</distributionManagement>
-```
-
-Alternatively, can you also execute an upload to the repository through the command line.  
-Just execute the following maven command for that:
-```
-clean install org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=codemc-snapshots::default::https://repo.codemc.io/repository/maven-snapshots/ -DaltReleaseDeploymentRepository=codemc-releases::default::https://repo.codemc.io/repository/maven-releases/
-```
-
-!!! warning "Important"
-    Make sure to have the right credentials for the deploy to be successful!  
-    If you're lost, ask a staff member on the [Discord] for support.
-
-----
-## How to build a JDK 8 Maven project?
-
-Jenkins dropped the official support for JDK 8 Maven builds, the following workaround is required:
-- Set the JDK version to JDK 11
-- Add the following maven goal to the commandline:
-`io.codemc.maven.plugins.toolchain:codemc-toolchain-selector:0.0.2-SNAPSHOT:select`
+You can read about the requirements and general process in the [Deploy to the CodeMC Nexus](../jenkins/deploy/) page.
