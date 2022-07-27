@@ -73,8 +73,10 @@ Jenkins dropped the official support for JDK 8 Maven builds. You can either use 
 
 ### Toolchain plugin
 
-- Set the JDK version to JDK 11
-- Add the following maven goal to the commandline:
+Our custom Maven plugin can select a toolchain (e.g. JDK 8) during the build process. For this the following workaround is needed:
+
+1. Set the JDK version to JDK 11
+2. Add the following maven goal to the commandline:
 `io.codemc.maven.plugins.toolchain:codemc-toolchain-selector:0.0.2-SNAPSHOT:select`
 
 ### Cross-compiling
