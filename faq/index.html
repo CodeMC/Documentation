@@ -352,6 +352,26 @@
     How to build a JDK 8 Maven project?
   </a>
   
+    <nav class="md-nav" aria-label="How to build a JDK 8 Maven project?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolchain-plugin" class="md-nav__link">
+    Toolchain plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-compiling" class="md-nav__link">
+    Cross-compiling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -532,6 +552,26 @@
     How to build a JDK 8 Maven project?
   </a>
   
+    <nav class="md-nav" aria-label="How to build a JDK 8 Maven project?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolchain-plugin" class="md-nav__link">
+    Toolchain plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-compiling" class="md-nav__link">
+    Cross-compiling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -603,10 +643,28 @@ To check this, head over to your <a href="https://github.com/settings/applicatio
 <p>You can read about the requirements and general process in the <a href="../jenkins/deploy/">Deploy to the CodeMC Nexus</a> page.</p>
 <hr />
 <h2 id="how-to-build-a-jdk-8-maven-project">How to build a JDK 8 Maven project?<a class="headerlink" href="#how-to-build-a-jdk-8-maven-project" title="Permanent link">&para;</a></h2>
-<p>Jenkins dropped the official support for JDK 8 Maven builds, the following workaround is required:
-- Set the JDK version to JDK 11
-- Add the following maven goal to the commandline:
-<code>io.codemc.maven.plugins.toolchain:codemc-toolchain-selector:0.0.2-SNAPSHOT:select</code></p>
+<p>Jenkins dropped the official support for JDK 8 Maven builds. You can either use our Maven plugin to select a JDK toolchain based on your <code>maven-compiler-plugin</code> settings or cross-compile with newer JDK version.</p>
+<h3 id="toolchain-plugin">Toolchain plugin<a class="headerlink" href="#toolchain-plugin" title="Permanent link">&para;</a></h3>
+<p>Our custom Maven plugin can select a toolchain (e.g. JDK 8) during the build process. For this the following workaround is needed:</p>
+<ol>
+<li>Set the JDK version to JDK 11</li>
+<li>Add the following maven goal to the commandline:
+<code>io.codemc.maven.plugins.toolchain:codemc-toolchain-selector:0.0.2-SNAPSHOT:select</code></li>
+</ol>
+<h3 id="cross-compiling">Cross-compiling<a class="headerlink" href="#cross-compiling" title="Permanent link">&para;</a></h3>
+<p>Cross-compiling is the process of targeting a different platform than the compiler itself. In this case, it allows to use any JDK beyond Java 8 to generate a build that is still compatible with the older version.</p>
+<p>You can achieve this by using <code>source</code> and <code>target</code> in the <code>maven-compiler-plugin</code>. However, the usage of <code>release</code> is recommended in order to verify that you don't use any Java API methods introduced in later Java versions.
+<div class="highlight"><pre><span></span><code>  <span class="nt">&lt;plugin&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>maven-compiler-plugin<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>3.10.1<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;configuration&gt;</span>
+      <span class="nt">&lt;release&gt;</span>8<span class="nt">&lt;/release&gt;</span>
+    <span class="nt">&lt;/configuration&gt;</span>
+  <span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div>
+For more details visit: <a href="https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-release.html">https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-release.html</a></p>
+<p>Please note that in comparison to the <code>toolchain-selector</code>, this approach will run code during the build process using the selected JDK version. This means that unit and integration tests will run using the newer JDK version instead of Java 8. </p>
 
               
             </article>
