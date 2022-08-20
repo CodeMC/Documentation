@@ -31,7 +31,7 @@ theme:
   features:
   - navigation.tabs
   icon:
-    repo: fontawesome/brands/github-square
+    repo: octicons/mark-github
 
 extra_css:
   - 'assets/css/styling.css'
