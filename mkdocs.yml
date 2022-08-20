@@ -31,7 +31,7 @@ theme:
   features:
   - navigation.tabs
   icon:
-    repo: octicons/mark-github-24
+    repo: octicons/mark-github-16
 
 extra_css:
   - 'assets/css/styling.css'
