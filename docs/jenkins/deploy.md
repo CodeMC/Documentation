@@ -16,135 +16,146 @@ Before you can publish your project to the nexus will you need to make a few fir
 To get started, first go to your project's Jenkins Page on CodeMC (https://ci.codemc.io/job/:user/job/:project) and login to your account if you didn't already.
 
 ### Configure Project
-On the project's page, click *:fontawesome-solid-cog: Configure* to go to the project settings.  
-From there, scroll down to the *Build Enviroment* section and click on *Use secret text(s) or file(s)*.
 
-A new section called *Bindings* should now open. Click the *Add* button and select *Username and password (separated)*.  
-You should now see two text fields called *Username Variable* and *Password Variable* respectively. Enter the names for the User and Password Variable that you want to use.  
-You can name them whatever you want, but remember to note them down somewhere to use later.
+#### :brands-gradle: Gradle
 
-!!! warning "Note"
-    Do NOT enter your actual username and password in those fields. They are only used to define the Enviroment Variables used on Jenkins.
-
-Under *Credentials* leave *Specific credentials* selected and use *jenkins-deploy/\*\*\*\*\*\* (jenkins-deploy)* from the dropdown menu.
-
-Continue to the *Build* section.
-
-!!! info "No Build step set?"
-    If you don't have a Build set create one as follows:
+1. Click on *:fontawesome-solid-gear: Configure* on your Project's page to open the project settings.
+2. Scroll down to the section *Build Enviroment* and click *Use secret text(s) or file(s)*.
+3. A new section called *Bindings* appears. Click the *Add* button and select *Username and password (separated)*.
+4. In the two appearing text fields, add a name for *Username Variable* and *Password Variable*  
     
-    === ":brands-maven: Maven"
-        1. Change *Maven Version* to that of your project's used and set *Root POM* to the path to your pom.xml file (Usually just `pom.xml`).
-        2. In the *Goals and options* field, put `clean install deploy`
-    
-    === ":brands-gradle: Gradle"
-        1. Click *Add build step* and select *Invoke Gradle script*.
-        2. Click *Use Gradle Wrapper* and make sure that *Make gradlew executable* is checked.
-        3. In the *Tasks* field put `clean publish`
+    !!! warning "Important"
+        Do NOT enter your actual username and password into those fields. They are used to define the Enviroment variables to use in your Gradle project for the username and password respectively.
+
+5. Under *Credentials* leave *Specific credentials* selected and select *jenkins-deploy* from the dropdown menus.
+6. Move to the *Build* section.
+7. If you don't have a build setup yet, create one as follows:
+    1. Click on *Add build step* and select *Invoke Gradle script*.
+    2. Click on *Use Gradle Wrapper* and check that *Make gradlew executable* is active.
+    3. Add `clean publish` into the *Tasks* field. You may add additional actions to this if you need them.
+8. Save your project's changes.
+
+#### :brands-maven: Maven
+
+Maven doesn't require any specific preparations as the Jenkins will inject the required username and password from its global Maven configuation to use.  
+If you don't have a Build setup in the *Build* section yet, do the following:
+
+1. Change *Maven Version* to that of your project's and set *Root POM* to the path to your main `pom.xml` (Usually just `pom.xml`).
+2. In the *Goals and options* field, put `clean install deploy`. You may add additional goals to this line if they are needed.
+3. Save your project's changes.
 
 ----
-## Configure Maven/Gradle
+## Configure your build files
 After you've setup your Jenkins Project properly can you now continue to add the right information into your `pom.xml`, `build.gradle` or `build.gradle.kts` file.
 
-!!! info "File Setup"
-    === ":brands-maven: pom.xml"
-        ```xml
-        <distributionManagement>
-          <repository>
-            <id>codemc-releases</id>
-            <url>https://repo.codemc.io/repository/maven-releases/</url>
-          </repository>
-          <snapshotRepository>
-            <id>codemc-snapshots</id>
-            <url>https://repo.codemc.io/repository/maven-snapshots/</url>
-          </snapshotRepository>
-        </distributionManagement>
-        ```
-    
-    === ":brands-gradle: build.gradle"
-        [:fontawesome-solid-file-code: Source][source_gradle]  
-        ```groovy
-        plugins {
-            id 'maven-publish'
+### :brands-maven: Maven (`pom.xml`)
+
+Add the following content to your `pom.xml` file:
+
+```xml
+<distributionManagement>
+    <repository>
+        <id>codemc-releases</id>
+        <url>https://repo.codemc.io/repository/maven-releases/</url>
+    </repository>
+    <!-- Only needed when publishing snapshots -->
+    <snapshotRepository>
+        <id>codemc-snapshots</id>
+        <url>https://repo.codemc.io/repository/maven-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
+```
+
+### :brands-gradle: Gradle (`build.gradle`)
+
+> [:fontawesome-solid-file-code: Source][source_gradle]  
+
+In your `build.gradle` file, add the following:
+
+```groovy
+plugins {
+    id 'maven-publish'
+}
+
+// Your other stuff like group, version, repositories, etc.
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = project.group // Group instance of your project
+            artifactId = "YourProjectName"
+            version = project.version // Version instance of your project
+            
+            from components.java
         }
-        
-        group = "your.project.group"
-        version = "1.0.0"
-        
-        publishing {
-            publications {
-                mavenJava(MavenPublication) {
-                    groupId = group
-                    artifactId = "YourArtifactName"
-                    version = project.version
-                    
-                    from components.java
+    }
+    
+    repositories {
+        maven {
+            def snapshotUrl = "https://repo.codemc.io/repository/maven-snapshots/"
+            def releaseUrl = "https://repo.codemc.io/repository/maven-releases/"
+            
+            // You can also directly set the URL if you don't want to publish snapshots.
+            url = project.version.endsWith("SNAPSHOT") ? snapshotUrl : releaseUrl
+            
+            // GRADLE_PROJECT_MAVEN_USERNAME and GRADLE_PROJECT_MAVEN_PASSWORD are the variables you defined in the previous section.
+            def mavenUsername = System.getenv("GRADLE_PROJECT_MAVEN_USERNAME") ? System.getenv("GRADLE_PROJECT_MAVEN_USERNAME") : null
+            def mavenPassword = System.getenv("GRADLE_PROJECT_MAVEN_PASSWORD") ? System.getenv("GRADLE_PROJECT_MAVEN_PASSWORD") : null
+            
+            if(mavenUsername != null && mavenPassword != null) {
+                credentials {
+                    username = mavenUsername
+                    password = mavenPassword
                 }
             }
+        }
+    }
+}
+```
+
+### :brands-kotlin: Gradle Kotlin-DSL (`build.gradle.kts`)
+
+> [:fontawesome-solid-file-code: Source][source_gradle_kts]  
+
+In your `build.gradle.kts` file, add the following:
+
+```kotlin
+plugins {
+    'maven-publish'
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            groupId = project.group // Group instance of your project
+            artifactId = "YourProjectName"
+            version = project.version // Version instance of your project
             
-            repositories {
-                maven {
-                    def snapshotUrl = "https://repo.codemc.io/repository/maven-snapshots/"
-                    def releaseUrl = "https://repo.codemc.io/repository/maven-releases/"
-                    
-                    // You can use any other check here to set what URL should be used.
-                    url = project.version.endsWith("SNAPSHOT") ? snapshotUrl : releaseUrl
-                    
-                    // ORG_GRADLE_PROJECT_mavenUsername and ORG_GRADLE_PROJECT_mavenPassword are the enviroments you defined before.
-                    def mavenUsername = System.getenv("ORG_GRADLE_PROJECT_mavenUsername") ? System.getenv("ORG_GRADLE_PROJECT_mavenUsername") : null
-                    def mavenPassword = System.getenv("ORG_GRADLE_PROJECT_mavenPassword") ? System.getenv("ORG_GRADLE_PROJECT_mavenPassword") : null
-                    
-                    if(mavenUsername != null && mavenPassword != null) {
-                        credentials {
-                            username = mavenUsername
-                            password = mavenPassword
-                        }
+            from(components["java"])
+        }
+    }
+    repositories {
+        val mavenUrl: String? by project
+        val mavenSnapshotUrl: String? by project
+        
+        (if(version.toString().endsWith("SNAPSHOT")) mavenSnapshotUrl else mavenUrl)?.let { url ->
+            maven(url) {
+                val mavenUsername: String? by project
+                val mavenPassword: String? by project
+                if(mavenUsername != null && mavenPassword != null) {
+                    credentials {
+                        username = mavenUsername
+                        password = mavenPassword
                     }
                 }
             }
         }
-        ```
-    
-    === ":brands-kotlin: build.gradle.kts"
-        [:fontawesome-solid-file-code: Source][source_gradle_kts]  
-        ```kotlin
-        plugins {
-            'maven-publish'
-        }
-        
-        group = "your.project.group"
-        version = "1.0.0"
-        
-        publishing {
-            publications {
-                create<MavenPublication>("mavenJava") {
-                    groupId = group
-                    artifactId = "YourArtifactName"
-                    version = project.version
-                    
-                    from(components["java"])
-                }
-            }
-            
-            repositories {
-                val mavenUrl: String? by project
-                val mavenSnapshotUrl: String? by project
-                
-                (if(version.toString().endsWith("SNAPSHOT")) mavenSnapshotUrl else mavenUrl)?.let { url ->
-                    maven(url) {
-                        val mavenUsername: String? by project
-                        val mavenPassword: String? by project
-                        if(mavenUsername != null && mavenPassword != null) {
-                            credentials {
-                                username = mavenUsername
-                                password = mavenPassword
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        ```
+    }
+}
+```
+
+----
+## Final steps
 
 Once finished can you now push the changes to your repository and trigger a build on CodeMC to get your project published to the repository.  
 See the [GitHub Integration](../github-integration) page on how to do this automatically.
