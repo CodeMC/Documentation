@@ -17,7 +17,7 @@ To get started, first go to your project's Jenkins Page on CodeMC (https://ci.co
 
 ### Configure Project
 
-#### :brands-gradle: Gradle
+#### :simple-gradle: Gradle
 
 1. Click on *:fontawesome-solid-gear: Configure* on your Project's page to open the project settings.
 2. Scroll down to the section *Build Enviroment* and click *Use secret text(s) or file(s)*.
@@ -35,7 +35,7 @@ To get started, first go to your project's Jenkins Page on CodeMC (https://ci.co
     3. Add `clean publish` into the *Tasks* field. You may add additional actions to this if you need them.
 8. Save your project's changes.
 
-#### :brands-maven: Maven
+#### :simple-apachemaven: Maven
 
 Maven doesn't require any specific preparations as the Jenkins will inject the required username and password from its global Maven configuation to use.  
 If you don't have a Build setup in the *Build* section yet, do the following:
@@ -48,7 +48,7 @@ If you don't have a Build setup in the *Build* section yet, do the following:
 ## Configure your build files
 After you've setup your Jenkins Project properly can you now continue to add the right information into your `pom.xml`, `build.gradle` or `build.gradle.kts` file.
 
-### :brands-maven: Maven (`pom.xml`)
+### :simple-apachemaven: Maven (`pom.xml`)
 
 Add the following content to your `pom.xml` file:
 
@@ -66,7 +66,7 @@ Add the following content to your `pom.xml` file:
 </distributionManagement>
 ```
 
-### :brands-gradle: Gradle (`build.gradle`)
+### :simple-gradle: Gradle (`build.gradle`)
 
 > [:fontawesome-solid-file-code: Source][source_gradle]  
 
@@ -113,7 +113,7 @@ publishing {
 }
 ```
 
-### :brands-kotlin: Gradle Kotlin-DSL (`build.gradle.kts`)
+### :simple-kotlin: Gradle Kotlin-DSL (`build.gradle.kts`)
 
 > [:fontawesome-solid-file-code: Source][source_gradle_kts]  
 
