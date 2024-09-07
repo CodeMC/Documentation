@@ -1,5 +1,5 @@
-site_name: 'Documentation'
-site_description: 'Wiki about the CI of CodeMC'
+site_name: 'CodeMC Documentation'
+site_description: 'Official Wiki of CodeMC'
 site_author: 'Gabrielle C. & Andre_601'
 
 copyright: |
@@ -12,17 +12,32 @@ repo_url: https://github.com/CodeMC/Documentation
 
 nav:
   - Welcome: index.md
-  - FAQ: faq.md
-  - Jenkins Docs:
-    - Jenkins Docs: jenkins/index.md
-    - Integrating into GitHub: jenkins/github-integration.md
-    - Creating a Gradle Job: jenkins/gradle.md
-    - Creating a Maven Job: jenkins/maven.md
-    - Deploy to the CodeMC Nexus: jenkins/deploy.md
+  - FAQ:
+    - faq/index.md
+    - faq/adding-your-project.md
+    - faq/non-mc-projects.md
+    - faq/cannot-access-folders.md
+    - faq/using-nms-repository.md
+    - faq/build-jdk-8-project.md
+  - Services:
+    - CI:
+      - services/ci/index.md
+      - Git Integration:
+        - services/ci/integrations/index.md
+        - Setup GitHub Integration: services/ci/integrations/setup-github.md
+        - Setup GitLab Integration: services/ci/integrations/setup-gitlab.md
+        - Setup Gitea Integration: services/ci/integrations/setup-gitea.md
+        - Setup BitBucket Integration: services/ci/integrations/setup-bitbucket.md
+      - Setups:
+        - Setup a Gradle Build Job: services/ci/setups/gradle-job.md
+        - Setup a Maven Build Job: services/ci/setups/maven-job.md
+    - Nexus:
+      - Deploy to nexus: services/nexus/deploy.md
+  - Usage Guidelines: usage-guidelines.md
 
 theme:
   name: 'material'
-  logo: 'assets/img/CodeMCLogoV2Full.png'
+  logo: 'assets/img/CodeMCLogoV2.png'
   favicon: 'assets/img/CodeMCLogoV2.png'
   palette:
     scheme: slate
@@ -30,8 +45,24 @@ theme:
     accent: blue
   features:
   - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.sections
+  - navigation.indexes
   icon:
     repo: octicons/mark-github-16
+    admonition:
+      note: octicons/pencil-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/light-bulb-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
 
 extra_css:
   - 'assets/css/styling.css'
@@ -44,15 +75,11 @@ extra:
       link: 'https://discord.gg/AGcFMu6'
 
 markdown_extensions:
-  - admonition
-  - codehilite:
-      guess_lang: false
   - toc:
       permalink: true
+  - md_in_html
+  - attr_list
   - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.details
   - pymdownx.magiclink:
       repo_url_shortener: true
       repo_url_shorthand: true
@@ -60,3 +87,20 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.blocks.admonition:
+      types:
+        - note
+        - abstract
+        - info
+        - tip
+        - success
+        - question
+        - warning
+        - failure
+        - danger
+        - bug
+        - example
+        - quote
+  - pymdownx.blocks.details
+  - pymdownx.blocks.tab:
+      alternate_style: true
