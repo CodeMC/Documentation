@@ -1,4 +1,5 @@
 # Are non-Minecraft projects allowed?
+
 Yes.
 
 CodeMC accepts a wide range of Projects for all kinds of topics, games, etc.  
