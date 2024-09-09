@@ -9,7 +9,6 @@ CodeMC follows the same version naming as Spigot and Paper do, so if you use `1.
 ///
 
 /// tab | :simple-apachemaven: pom.xml
-
 ```xml
 <repositories>
   <repository>
@@ -27,10 +26,9 @@ CodeMC follows the same version naming as Spigot and Paper do, so if you use `1.
   </dependency>
 </dependencies>
 ```
-
 ///
-/// tab | :simple-gradle: build.gradle
 
+/// tab | :simple-gradle: build.gradle
 ```groovy
 repositories {
     maven{ url = "https://repo.codemc.io/repository/nms/" }
@@ -40,12 +38,9 @@ dependencies {
     compileOnly("org.spigotmc:spigot:{version}")
 }
 ```
-
 ///
 
-///
 /// tab | :simple-gradle-kotlin: build.gradle.kts
-
 ```kotlin
 repositories {
     maven("https://repo.codemc.io/repository/nms/")
@@ -55,5 +50,4 @@ dependencies {
     compileOnly("org.spigotmc:spigot:{version}")
 }
 ```
-
 ///
