@@ -8,7 +8,7 @@ Remember to follow our [Usage Guidelines](../../usage-guidelines.md) on how to u
 ///
 
 ## Prerequisites
-Before you can deploy your project to the Nexus will you first need to do some preparations to ensure that everything will work as expected.
+Before you can deploy your project to the Nexus, you will first need to do some preparations to ensure that everything will work as expected.
 
 ### Login
 You first need to login to your CodeMC Account and head towards the project you own that should have automatic deployments setup.

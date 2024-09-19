@@ -10,7 +10,7 @@ This includes, but isn't limited to following Coding Practices such as **D**on't
 
 ### Project must be of use for others
 While it can be nice to have a CI for your library to upload and share, should you limit it to libraries and projects that can have a use for others.  
-Effectively, if the project's purpose is to ease your coding of other Projects, while not having any use outside of that for others, is it not something you can and should put on our CI.
+Effectively, if the project's purpose is to ease your coding of other Projects, while not having any use outside of that for others, is it something you shouldn't put on our CI.
 
 ### Project must be properly maintained
 CodeMC is not meant as a cheap way of storing your project's final jar file without any updates to it. As such are we requiring your project to be actively maintained by receiving regular updates.  
@@ -29,7 +29,7 @@ Should you find such a project on our CI are your obligated to report it to us a
 ### Project should have an english documentation available
 CodeMC accepts non-english projects. However, to allow a user to easily understand what this project does and is about, should it provide easy access to an english documentation of the Project's README or other noteworthy documentation a user may want to read.
 
-Translations done through a translator without proofreading by an english speaking person should have a note of not being 100% accurate and done via translators.
+Translations done through a translator without proofreading by an English-speaking person should note less than 100% accuracy, indicating the use of a translator.
 
 ## Reasonable Usage Limits
 We do not apply usage limits (Rate limits) on most of our CI. For parts where we do this are we giving relatively generous limits.  
@@ -44,7 +44,7 @@ We reserve the right to punish you in the following ways, should you be confirme
 - Removal of your account(s).
 - Complete blocking of access to our CI and/or Nexus.
 
-CodeMC may issue one or multiple of the above punishments at any given time at our own discretion.
+CodeMC may issue one or multiple of the above punishments at any given time at our discretion. Any of these actions may happen in any order of any severity. 
 
 ## Guideline Updates and Opting out
 These guidelines may be updated at any given moment. We may notify users on our [Discord Server](https://discord.gg/AGcFMu6) about updates to these Guidelines, do not guarantee this however.  

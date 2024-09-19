@@ -1,6 +1,6 @@
 # CI Service
 CodeMC allows you to configure steps for your project to execute whenever a new build is triggered.  
-It also has integrated support for automatic builds from various Remote Repository hosts such as GitHub, GitLab or Gitea/Forgejo.
+It also has integrated support for automatic builds from all Remote Repository hosts that support [Git](https://git-scm.com).
 
 ## Git Integrations
 CodeMC supports any remote Git Repository, but also has support for specific Repository Hosts such as GitHub, GitLab or Gitea/Forgejo.

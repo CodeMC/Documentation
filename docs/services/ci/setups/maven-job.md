@@ -33,7 +33,7 @@ Tutorials can be found in the [Integration Pages](../integrations/index.md) of t
 /// info | This is optional
 ///
 
-We recommend enabling **Add timestamps to the Console Output**
+We recommend enabling **Add timestamps to the Console Output**.
 
 ### Build
 /// warning | Important
