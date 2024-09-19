@@ -1,6 +1,6 @@
 # Are non-Minecraft projects allowed?
 
-Yes.
+**Short Answer:** Yes
 
-CodeMC accepts a wide range of Projects for all kinds of topics, games, etc.  
-Only important part is, that the project in question does not violate our [Usage Guidelines](../usage-guidelines.md) to be allowed.
+**Long Answer:** CodeMC accepts any Java project that shows a level of quality and usefulness for the overall Java Community, be it a library, a software or even a game.  
+What matters is, that the project is following our [Usage Guidelines](../usage-guidelines.md) to remain on our Services.
