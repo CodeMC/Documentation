@@ -8,5 +8,5 @@ In order to join will you need to join the [Discord Server](https://discord.gg/A
 You are only required to make one join request with a project.  
 If you are accepted to the CI, you can create new projects by yourself without additional approval.
 
-With that said, abusing this freedom will have severe punishments as a result.
+Keep in mind however, that any new project you make needs to follow our [Usage Guidelines](../usage-guidelines.md) and that failing to do so may result in punishments outlined [here](../usage-guidelines.md#punishments).
 ///
