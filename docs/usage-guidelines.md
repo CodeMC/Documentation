@@ -1,4 +1,8 @@
 # CodeMC Usage Guidelines
+
+**Last Update:** 29. September 2024  
+**Date Effective:** TBD
+
 By joining CodeMC are you agreeing to the below written Usage Guidelines ("Guidelines"). Not following them will result in punishments, as described within the [Punishments](#punishments) section of this page.
 
 ## Project Standards
