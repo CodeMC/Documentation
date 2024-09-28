@@ -20,6 +20,7 @@ nav:
     - faq/using-nms-repository.md
     - faq/build-jdk-8-project.md
   - Services:
+    - services/index.md
     - CI:
       - services/ci/index.md
       - Git Integration:
@@ -32,8 +33,12 @@ nav:
         - Setup a Gradle Build Job: services/ci/setups/gradle-job.md
         - Setup a Maven Build Job: services/ci/setups/maven-job.md
     - Nexus:
+      - services/nexus/index.md
       - Deploy to nexus: services/nexus/deploy.md
   - Usage Guidelines: usage-guidelines.md
+
+not_in_nav: |
+  /jenkins/*
 
 theme:
   name: 'material'
