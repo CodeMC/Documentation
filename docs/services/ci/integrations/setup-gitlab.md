@@ -23,21 +23,20 @@ To add a Commit status, follow these steps:
 
 If you are using a freestyle or Maven project, your process is done. However, if you are using a Pipeline project, continue with the steps below.
 
-1. Moving back to your project, create or locate the `Jenkinsfile` inside the root directory.
-2. Inside of the `Jenkinsfile`, create a stage that sets the build status for your project:
-
-```Jenkinsfile
- pipeline {
-    agent any
-
-    stages {
-       stage('gitlab') {
-          steps {
-             echo 'Notify GitLab'
-             updateGitlabCommitStatus name: 'build', state: 'pending'
-             updateGitlabCommitStatus name: 'build', state: 'success'
-          }
-       }
+1.  Moving back to your project, create or locate the `Jenkinsfile` inside the root directory.
+2.  Inside of the `Jenkinsfile`, create a stage that sets the build status for your project:
+    ```groovy
+    pipeline {
+        agent any
+        
+        stages {
+            stage('gitlab') {
+                steps {
+                    echo 'Notify GitLab'
+                    updateGitlabCommitStatus name: 'build', state: 'pending'
+                    updateGitlabCommitStatus name: 'build', state: 'success'
+                }
+            }
+        }
     }
- }
-```
+    ```

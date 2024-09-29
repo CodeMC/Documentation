@@ -51,7 +51,7 @@ Once your Jenkins Project is ready can you update your `pom.xml`, `build.gradle`
 
 /// tab | :simple-apachemaven: `pom.xml` (Maven)
 Add or update the following section to your `pom.xml` file:
-```xml
+```xml { title="pom.xml" }
 <distributionManagement>
     <repository>
         <id>codemc-releases</id>
@@ -68,8 +68,12 @@ Add or update the following section to your `pom.xml` file:
 /// tab | :simple-gradle: `build.gradle` (Gradle Groovy DSL)
 [:octicons-file-code-16: Source](https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:complete_example){ target="_blank" rel="nofollow" }
 
+//// info |
+Press the :material-plus-circle: icon for extra info.
+////
+
 Add or update the following parts:
-```groovy
+```groovy { .annotate title="build.gradle" }
 plugins {
     // Other plugins
     id 'maven-publish'
@@ -93,12 +97,10 @@ publishing {
             def snapshotUrl = "https://repo.codemc.io/repository/maven-snapshots/"
             def releaseUrl = "https://repo.codemc.io/repository/maven-releases/"
             
-            // You may also set the URL directly here, if you don't want to
-            // publish snapshots.
+            // (1)
             url = project.version.endsWith("SNAPSHOT") ? snapshotUrl : releaseUrl
             
-            // Replace GRADLE_PROJECT_MAVEN_USERNAME and GRADLE_PROJECT_MAVEN_PASSWORD
-            // with the values you have set in the Prerequisite section.
+            // (2)
             def mavenUsername = System.getenv("GRADLE_PROJECT_MAVEN_USERNAME")
             def mavenPassword = System.getenv("GRADLE_PROJECT_MAVEN_PASSWORD")
             
@@ -112,13 +114,17 @@ publishing {
     }
 }
 ```
+
+1.  You can also set the URL directly here should you only need to deploy to the release or snapshot repository itself.
+2.  You need to replace `GRADLE_PROJECT_MAVEN_USERNAME` and `GRADLE_PROJECT_MAVEN_PASSWORD` with the values you have defined in the [Prerquisites](#prerequisites) section of this page.  
+    Do **NOT** directly set the username and password here, as it would allow anyone to take and use it!
 ///
 
 /// tab | :simple-kotlin: `build.gradle.kts` Gradle (Kotlin DSL)
 [:octicons-file-code-16: Source](https://github.com/Minecrell/ServerListPlus/blob/ef8cda91cc73a4599c359640c4e97dde9b699649/build.gradle.kts#L146-L178){ target="_blank" rel="nofollow" }
 
 Add or update the following parts:
-```kotlin
+```kotlin { title="build.gradle.kts" }
 plugins {
     // Other plugins
     `maven-publish`

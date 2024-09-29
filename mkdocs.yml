@@ -49,6 +49,7 @@ theme:
     primary: cyan
     accent: blue
   features:
+  - content.code.annotate
   - navigation.tabs
   - navigation.tabs.sticky
   - navigation.sections
