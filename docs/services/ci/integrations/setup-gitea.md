@@ -15,6 +15,6 @@ The setup can be done either for an entire organization, or a specific repositor
 4. Add `https://ci.codemc.io/...` as the target URL.
 5. Under **Trigger on** either leave it at `push events` or chose `Custom events...` and choose the following:
     - `Pull request`
-    - `Pushe`
+    - `Push`
     - `Repository`
 6. Press **Add Webhook** to save your new Webhook.
