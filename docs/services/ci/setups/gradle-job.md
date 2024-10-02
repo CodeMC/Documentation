@@ -1,7 +1,9 @@
 # Setup a Gradle Build Job
+
 This page will explain to you how to setup a build job for your Maven Project.
 
 ## Creating the Job
+
 /// note
 You can skip these steps should you already have a project set up on the CI and instead directly go to [Configuration](#configuration).
 ///
@@ -11,6 +13,7 @@ You can skip these steps should you already have a project set up on the CI and 
 3. Jenkins should now create a new Job for you and redirect you to its configuration page once done.
 
 ## Configuration
+
 We recommend to set the following settings for your project:
 
 ### Source Code Management
@@ -21,6 +24,7 @@ We recommend to set the following settings for your project:
 4. If you only want specific branches to trigger a Build can you add a **Branch Specifier** by pressing **Add Brnach**, if there isn't already one set.
 
 ### Build Triggers
+
 /// info | This is optional
 You can setup automatic Builds for GitHub, GitLab, or any other supported Repository Host.  
 Tutorials can be found in the [Integration Pages](../integrations/index.md) of this documenation.
@@ -30,12 +34,14 @@ Tutorials can be found in the [Integration Pages](../integrations/index.md) of t
 2. Put `*/10 * * * *` in the large text field to set CodeMC to check your remote repository every 10 minutes.
 
 ### Build Environment
+
 /// info | This is optional
 ///
 
 We recommend enabling **Add timestamps to the Console Output**.
 
 ### Build
+
 /// warning | Important
 In order to build a project with JDK 8, you need to use a [workaround](../../../faq/build-jdk-8-project.md).
 ///

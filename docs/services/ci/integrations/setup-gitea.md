@@ -1,4 +1,5 @@
 # Setup Gitea support
+
 /// note
 The following instructions also apply to [Forgejo instances](https://forgejo.org/){ target="_blank" rel="nofollow" }.
 ///
@@ -6,6 +7,7 @@ The following instructions also apply to [Forgejo instances](https://forgejo.org
 CodeMC supports hooking into [Gitea](https://about.gitea.com/){ target="_blank" rel="nofollow" } instances for creating new builds whenever a commit is done to your project.
 
 ## Setup automatic Builds
+
 CodeMC allows you to create builds whenever a commit is pushed to your repository.  
 The setup can be done either for an entire organization, or a specific repository. The steps are the exact same except for where you apply the changes.
 

@@ -1,31 +1,55 @@
-name: Deploy Site
+name: Deploy to GitHub Pages
 
 on:
+  workflow_dispatch:
   push:
-    paths: 
-    - 'docs/**'
-    - 'mkdocs.yml'
-    branches:
-    - master
+    branches: [master]
+    paths:
+      - .github/workflows/deploy.yml
+      - docs/**
+      - mkdocs.yml
+      - requirements.txt
+
+permissions:
+  actions: read
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: [ubuntu-latest]
+  buildAndDeploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }} # Used to report back the URL of the deploy.
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip setuptools
-        python -m pip install -r requirements.txt
-    - name: Deploy Files
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git remote add gh-token "https://github.com/CodeMC/Documentation.git"
-        git fetch gh-token && git fetch gh-token gh-pages:gh-pages
-        python -m mkdocs gh-deploy --clean -m "Deploying Wiki to GitHub Pages (${GITHUB_SHA:0:7})" --remote-name gh-token
-        git push gh-token gh-pages
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required for git-revision-date-localized plugin
+      - name: Setup Python 3.x
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install Dependencies
+        run: |
+          pip install -U pip setuptools
+          pip install -r requirements.txt
+      - name: Build Pages
+        run: mkdocs build
+        env:
+          GIT_COMMITTER_ENABLED: true # Used to enable Git Committers plugin
+          COMMITTER_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Used to increase rate limits for GitHub API.
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,7 +1,9 @@
 # Setup BitBucket Integration
+
 CodeMC supports integrating with [BitBucket](https://bitbucket.org){ target="_blank" rel="nofollow" } for creating new builds on commits, pull requests, or other events.
 
 ## Setup Automatic Builds
+
 CodeMC allows to create new builds whenever commits are done to a connected BitBucket Repository.
 
 1. Go to your repository and press the :octicons-gear-16: **Settings** Tab.

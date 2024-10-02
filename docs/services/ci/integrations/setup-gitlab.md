@@ -1,8 +1,10 @@
 # Setup GitLab Integration
+
 CodeMC supports integrating with [GitLab](https://gitlab.com){ target="_blank" rel="nofollow" } for features such as creating new builds on commits or return a build status on Pull requests, commits, etc.  
 This page tries to explain how you can enable such features.
 
 ## Setup Automatic Builds
+
 CodeMC allows to create new builds whenever commits are done to a connected GitLab Repository. The full steps are available in the [GitLab Documentation](https://docs.gitlab.com/ee/integration/jenkins.html#configure-the-jenkins-project).
 
 1. First, go to your Jenkins Job, and click on the :octicons-gear-16: **Settings** tab.
@@ -14,6 +16,7 @@ CodeMC allows to create new builds whenever commits are done to a connected GitL
 7. Test the webhook by pressing the *Test* Button.
 
 ## Setup a Commit Status
+
 You can add a Commit Status to your repository to display wether a build was successful or not when a commit was made. Full instructions are available on [GitLab](https://docs.gitlab.com/ee/integration/jenkins.html#configure-the-jenkins-project).
 To add a Commit status, follow these steps:
 
