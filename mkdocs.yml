@@ -42,8 +42,8 @@ not_in_nav: |
 
 theme:
   name: 'material'
-  logo: 'assets/img/CodeMCLogoV2.png'
-  favicon: 'assets/img/CodeMCLogoV2.png'
+  logo: 'assets/img/codemc_logo.png'
+  favicon: 'assets/img/codemc_logo.png'
   palette:
     scheme: slate
     primary: cyan
