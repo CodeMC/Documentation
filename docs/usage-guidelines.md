@@ -58,6 +58,6 @@ CodeMC may issue one or multiple of the above punishments at any given time at o
 ## Guideline Updates and Opting out
 
 These guidelines may be updated at any given moment and we will inform about those on our [Discord Server](https://discord.gg/AGcFMu6) unless not possible for technical reasons.  
-Should we update these Guidelines will we grant a 1 Wekk (7 Days) Period to Opt out of these Guidelines. You may Opt out by no longer using our Services. By continuing to using our services after the aforementioned time Period are you agreeing to the updated Guidelines.
+Should we update these Guidelines will we grant a 1 Week (7 Days) Period to Opt out of these Guidelines. You may Opt-out by no longer using our Services. By continuing to use our services after the aforementioned period are you agreeing to the updated Guidelines.
 
 You may find the date of last update at the bottom.
