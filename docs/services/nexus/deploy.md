@@ -60,7 +60,7 @@ Add or update the following section to your `pom.xml` file:
 </distributionManagement>
 ```
 
-1. Replace `{username}` with your GitHub Username used to login to CodeMC.
+1. Replace `{username}` with your **lowercased** GitHub Username used to login to CodeMC.
 ///
 
 /// tab | :simple-gradle: build.gradle
@@ -109,7 +109,7 @@ publishing {
 }
 ```
 
-1.  Replace `{username}` with your GitHub Username used to login to CodeMC.
+1. Replace `{username}` with your **lowercased** GitHub Username used to login to CodeMC.
 2.  You need to replace `GRADLE_PROJECT_MAVEN_USERNAME` and `GRADLE_PROJECT_MAVEN_PASSWORD` with the values you have defined in the [Prerquisites](#prerequisites) section of this page.  
     Do **NOT** directly set the username and password here, as it would allow anyone to take and use it!
 ///
