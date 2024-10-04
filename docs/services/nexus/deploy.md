@@ -49,7 +49,7 @@ In case you already have a Build task, make sure that **Goals and options** incl
 ## Configure your Build files
 Once your Jenkins Project is ready can you update your `pom.xml`, `build.gradle` or `build.gradle.kts`, depending on the tool used.
 
-/// tab | :simple-apachemaven: `pom.xml` (Maven)
+/// tab | :simple-apachemaven: pom.xml
 Add or update the following section to your `pom.xml` file:
 ```xml { title="pom.xml" }
 <distributionManagement>
@@ -65,7 +65,7 @@ Add or update the following section to your `pom.xml` file:
 ```
 ///
 
-/// tab | :simple-gradle: `build.gradle` (Gradle Groovy DSL)
+/// tab | :simple-gradle: build.gradle
 [:octicons-file-code-16: Source](https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:complete_example){ target="_blank" rel="nofollow" }
 
 //// info |
@@ -120,7 +120,7 @@ publishing {
     Do **NOT** directly set the username and password here, as it would allow anyone to take and use it!
 ///
 
-/// tab | :simple-kotlin: `build.gradle.kts` Gradle (Kotlin DSL)
+/// tab | :simple-kotlin: build.gradle.kts
 [:octicons-file-code-16: Source](https://github.com/Minecrell/ServerListPlus/blob/ef8cda91cc73a4599c359640c4e97dde9b699649/build.gradle.kts#L146-L178){ target="_blank" rel="nofollow" }
 
 Add or update the following parts:

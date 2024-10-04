@@ -34,7 +34,7 @@ nav:
         - Setup a Maven Build Job: services/ci/setups/maven-job.md
     - Nexus:
       - services/nexus/index.md
-      - Deploy to nexus: services/nexus/deploy.md
+      - Deploy to Nexus: services/nexus/deploy.md
   - Usage Guidelines: usage-guidelines.md
 
 not_in_nav: |

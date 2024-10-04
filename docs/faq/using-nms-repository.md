@@ -51,7 +51,7 @@ dependencies {
     As an example, if you use `1.21-R0.1-SNAPSHOT` for the Spigot API would you also need to use it for the NMS repository.
 ///
 
-/// tab | :simple-gradle: build.gradle.kts
+/// tab | :simple-kotlin: build.gradle.kts
 
 //// info |
 Press the :material-plus-circle: icon for extra info.
