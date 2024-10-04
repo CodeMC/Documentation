@@ -22,9 +22,9 @@ How you configure your project is slightly different depending on the build mana
 3.  In the appearing sub-menu, press **Add** and select **Username and password (separated)**
 4.  For the **Username Variable** and **Password Variable** text boxes, set a fitting name to use.
     //// warning | Important
-    These text boxes are NOT for your actual username and password. They are used to set the variable names that jenkins should use to get the respective values.
+    These text boxes are NOT for your actual username and password. They are used to set the Environment Variable names that jenkins should use to get the respective values.
     ////
-5.  Leave the **Credentials** Menu at **jenkins-deploy**
+5.  Set **Credentials** to **nexus-repository** if it isn't selected already.
 6.  Move to the **Build** Section.
     - Should you not have any Build settings yet, follow these steps:
         - Press **Add build step** and select **Invoke Gradle script**.
@@ -51,18 +51,16 @@ Once your Jenkins Project is ready can you update your `pom.xml`, `build.gradle`
 
 /// tab | :simple-apachemaven: pom.xml
 Add or update the following section to your `pom.xml` file:
-```xml { title="pom.xml" }
+```xml { .annotated title="pom.xml" }
 <distributionManagement>
     <repository>
-        <id>codemc-releases</id>
-        <url>https://repo.codemc.io/repository/maven-releases/</url>
-    </repository>
-    <repository>
-        <id>codemc-snapshots</id>
-        <url>https://repo.codemc.io/repository/maven-snapshots/</url>
+        <id>codemc</id>
+        <url>https://repo.codemc.io/repository/{username}/</url> <!-- (1) -->
     </repository>
 </distributionManagement>
 ```
+
+1. Replace `{username}` with your GitHub Username used to login to CodeMC.
 ///
 
 /// tab | :simple-gradle: build.gradle
@@ -94,11 +92,7 @@ publishing {
     
     repositories {
         maven {
-            def snapshotUrl = "https://repo.codemc.io/repository/maven-snapshots/"
-            def releaseUrl = "https://repo.codemc.io/repository/maven-releases/"
-            
-            // (1)
-            url = project.version.endsWith("SNAPSHOT") ? snapshotUrl : releaseUrl
+            url = "https://repo.codemc.io/repository/{username}/" // (1)
             
             // (2)
             def mavenUsername = System.getenv("GRADLE_PROJECT_MAVEN_USERNAME")
@@ -115,7 +109,7 @@ publishing {
 }
 ```
 
-1.  You can also set the URL directly here should you only need to deploy to the release or snapshot repository itself.
+1.  Replace `{username}` with your GitHub Username used to login to CodeMC.
 2.  You need to replace `GRADLE_PROJECT_MAVEN_USERNAME` and `GRADLE_PROJECT_MAVEN_PASSWORD` with the values you have defined in the [Prerquisites](#prerequisites) section of this page.  
     Do **NOT** directly set the username and password here, as it would allow anyone to take and use it!
 ///
