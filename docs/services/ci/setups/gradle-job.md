@@ -59,7 +59,7 @@ In order to build a project with JDK 8, you need to use a [workaround](../../../
 
 ## Final Steps
 
-1.  Press the **Save** Button to save your changes and be redirected to your Project's Job page.
+1.  Press the **Save** Button to save your changes, which will redirect you to your Project's Job page.
 2.  To start a new Build, press the **Build Now** button.
 3.  CodeMC will now queue a new Build to be made.  
     To see the console of your job, press the rotating icon next to the build number in the **Build History** Section.
