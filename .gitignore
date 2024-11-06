@@ -1,0 +1,2 @@
+# Ignore .cache folder created by git-committers plugin
+.cache/

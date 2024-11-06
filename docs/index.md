@@ -1,11 +1,34 @@
 # Welcome to CodeMC
+
 This site contains important pages around our CI site and how you can use it.
 
-## Pages
+## Jenkins Docs
 
-- [FAQ](faq)
-- [Jenkins](jenkins)
-    - [GitHub Integrations](jenkins/github-integration)
-    - [Creating a Gradle Job](jenkins/gradle)
-    - [Creating a Maven Job](jenkins/maven)
-    - [Deploy to the CodeMC Nexus](jenkins/deploy)
+<div class="grid cards" markdown>
+
+-   ### [FAQ](faq/index.md)
+    
+    ----
+    
+    Frequently asked questions about our Services.
+
+-   ### [CI Service](services/ci/index.md)
+    
+    ----
+    
+    Our CI Service allows you to build new jars for your project.
+
+-   ### [Nexus Service](services/nexus/deploy.md)
+    
+    ----
+    
+    CodeMC offers a Nexus for you to deploy your projects towards, so that others can use them.
+
+-   ### [Usage Guidelines](usage-guidelines.md)
+    
+    ----
+    
+    We have specific rules and guidelines in place to keep a healthy ecosystem. Read them.
+
+</div>
+

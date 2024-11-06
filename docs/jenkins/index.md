@@ -1,9 +1,6 @@
-# GitHub
-Below can you find a list of pages about GitHub related topics of CodeMC.
+---
+template: redirect.html
+location: '../../services'
+---
 
-## Pages
-
-- [Integrating into GitHub](github-integration)
-- [Creating a Gradle Job](gradle)
-- [Creating a Maven Job](maven)
-- [Deploy to the CodeMC Nexus](deploy)
+<!-- Comment (Required for the page to build) -->
