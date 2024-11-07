@@ -96,11 +96,6 @@ plugins:
   - git-revision-date-localized:
       enabled: true
       enable_creation_date: true
-  - git-committers:
-      enabled: !ENV [GIT_COMMITTER_ENABLED, false]
-      repository: CodeMC/Documentation
-      branch: master
-      token: !ENV [COMMITTER_TOKEN]
 
 markdown_extensions:
   - toc:
