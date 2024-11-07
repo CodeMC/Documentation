@@ -1,5 +1,9 @@
 # Setup Gitea support
 
+/// warning
+The Content of this page is not yet complete and lacks important info.
+///
+
 /// note
 The following instructions also apply to [Forgejo instances](https://forgejo.org/){ target="_blank" rel="nofollow" }.
 ///

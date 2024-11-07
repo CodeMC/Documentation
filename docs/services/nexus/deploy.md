@@ -21,9 +21,11 @@ How you configure your project is slightly different depending on the build mana
 2.  Scroll to the **Build Environment** Section and press **Use secret text(s) or file(s).
 3.  In the appearing sub-menu, press **Add** and select **Username and password (separated)**
 4.  For the **Username Variable** and **Password Variable** text boxes, set a fitting name to use.
+    
     //// warning | Important
     These text boxes are NOT for your actual username and password. They are used to set the Environment Variable names that jenkins should use to get the respective values.
     ////
+    
 5.  Set **Credentials** to **nexus-repository** if it isn't selected already.
 6.  Move to the **Build** Section.
     - Should you not have any Build settings yet, follow these steps:

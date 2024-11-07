@@ -21,7 +21,7 @@ We recommend to set the following settings for your project:
 1. In the **Source Code Management** Section, select **Git**
 2. Press **Add Repository**.
 3. Enter your repository's URL in the **Repository URL** field.
-4. If you only want specific branches to trigger a Build can you add a **Branch Specifier** by pressing **Add Brnach**, if there isn't already one set.
+4. If you only want specific branches to trigger a Build can you add a **Branch Specifier** by pressing **Add Branch**, if there isn't already one set.
 
 ### Build Triggers
 
