@@ -37,6 +37,7 @@ nav:
       - Deploy to Nexus: services/nexus/deploy.md
   - Usage Guidelines: usage-guidelines.md
 
+# Ignore /docs/jenkins/ paths. Those are the old pages that redirect to the new ones where possible.
 not_in_nav: |
   /jenkins/*
 
