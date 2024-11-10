@@ -8,6 +8,10 @@ This page tries to explain how you can enable such features.
 CodeMC allows to create new builds whenever commits are done to a connected GitHub Repository.  
 The setup can be done either for an entire Organization, meaning that it applies to all repositories hosted on that Organization, or for a specific repository alone. The steps are the same, except for where you access the settings:
 
+/// note
+Organizations require to have the [CodeMC Application](https://github.com/settings/connections/applications/2debe3b061b244423bf5){ target="_blank" rel="nofollow" } approved to properly access the Organization on the CI.
+///
+
 1. Go to your Organization/Repository and press the :octicons-gear-16: **Settings** Tab.
 2. Click :octicons-webhook-16: **Webhooks** on the left sidebar.
 3. Click the **Add Webhook** Button on the top-right of the page.
