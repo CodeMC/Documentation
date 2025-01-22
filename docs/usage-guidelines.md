@@ -18,11 +18,11 @@ While hosting a Continuous Integration (CI) setup for your library or project ca
 
 CodeMC is not intended as a permanent repository for inactive or outdated projects. As such, projects hosted on the platform must demonstrate active maintenance through regular updates. Maintenance includes, but is not limited to:
 
-- Committing code with descriptive messages.
+Creating commits with descriptive messages.
 - Keeping dependencies up to date.
 - Managing the project’s issue and pull request trackers, which includes closing issues, merging pull requests, labeling them appropriately, and assigning responsible individuals.
 
-We acknowledge that there may be valid reasons for a project to become stale. In such instances, we request that you inform us of the situation, ensuring we remain informed.
+We acknowledge that there are valid reasons for a project to become stale. In such instances, we request that you inform us of the situation to ensure we remain informed.
 
 ### Prohibition of Illegal Activities or Content
 
@@ -30,7 +30,7 @@ CodeMC is committed to fostering a welcoming and inclusive programming community
 
 ### English Documentation Requirement
 
-Although CodeMC accepts projects in languages other than English, we require that projects provide English-language documentation. This is to ensure that users can easily understand the purpose and functionality of the project. English documentation should be readily accessible, whether in the form of the project's README or other relevant materials.
+Although CodeMC accepts projects in languages other than English, we require that projects provide English-language documentation. As CodeMC is a predominately English community, staff and users must be able to understand your project easily. English documentation should be readily accessible, whether in the project's README or other relevant materials.
 
 If the English documentation has been translated using an automated tool, it is important to note that the accuracy may be less than 100%. In such cases, the use of machine translation should be disclosed.
 
@@ -54,6 +54,6 @@ These actions may be implemented individually or in combination, depending on th
 
 These guidelines are subject to change at any time. In the event of an update, we will notify users via our [Discord Server](https://discord.gg/AGcFMu6), unless technical constraints prevent such notification. 
 
-If these guidelines are updated, users will have a period of 7 days to opt out of the updated terms. To opt out, users must cease using our services. Continued use of our services after the 7-day period constitutes acceptance of the updated guidelines.
+If these guidelines are updated, users will have a period of 7 days to opt out of the updated terms. To opt-out, users must cease using our services and notify staff immediately. Continued use of our services after 7 days constitutes acceptance of the updated guidelines.
 
 The date of the last update can be found at the bottom of this document.
