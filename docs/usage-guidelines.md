@@ -18,7 +18,7 @@ While hosting a Continuous Integration (CI) setup for your library or project ca
 
 CodeMC is not intended as a permanent repository for inactive or outdated projects. As such, projects hosted on the platform must demonstrate active maintenance through regular updates. Maintenance includes, but is not limited to:
 
-Creating commits with descriptive messages.
+- Creating commits with descriptive messages.
 - Keeping dependencies up to date.
 - Managing the project’s issue and pull request trackers, which includes closing issues, merging pull requests, labeling them appropriately, and assigning responsible individuals.
 
