@@ -56,13 +56,14 @@ Add or update the following section to your `pom.xml` file:
 ```xml { .annotated title="pom.xml" }
 <distributionManagement>
     <repository>
-        <id>codemc</id>
-        <url>https://repo.codemc.io/repository/{username}/</url> <!-- (1) -->
+        <id>{username}</id> <!-- (1) -->
+        <url>https://repo.codemc.io/repository/{username}/</url> <!-- (2) -->
     </repository>
 </distributionManagement>
 ```
 
 1. Replace `{username}` with your **lowercased** GitHub Username used to login to CodeMC.
+2. Replace `{username}` with your **lowercased** GitHub Username used to login to CodeMC.
 ///
 
 /// tab | :simple-gradle: build.gradle
