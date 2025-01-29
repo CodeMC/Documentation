@@ -12,7 +12,7 @@ CodeMC allows you to create builds whenever a commit is pushed to your repositor
 Unlike other Sites is the setup for Gitea/Forgejo a little more complicated and requires some steps on the CI first.
 
 /// warning | Important
-Using this setup will trigger a build no matter the changes or targeted files.  
+Using this setup will trigger a build, no matter the changes or targeted files.  
 It will ignore any exclusion/inclusion settings of the Polling options.
 
 Use the [Periodic Builds](#setup-periodic-builds) setup to avoid this.
@@ -40,7 +40,7 @@ After completing the above steps, head over to your Gitea/Forgejo repository and
 
 ## Setup periodic Builds
 
-If you don't need to have builds made when a commit is pushed can periodic builds be used instead to regularely check your repository for changes and build those.
+If you don't need to have builds made when a commit is pushed, periodic builds can be used instead to check your repository for changes and build those regularly.
 
 1.  Login to your account on `https://ci.codemc.io` if you haven't already.
 2.  Head over to your project on CodeMC and open the settings by clicking :octicons-gear-24: **Configure**.
@@ -49,7 +49,7 @@ If you don't need to have builds made when a commit is pushed can periodic build
     - *Optional:* Under **Additional Behaviours** press the **Add** button and add **Polling ignores commits in certain paths** to add settings to define paths that should be included or excluded during a poll.
 4.  Scroll down to the **Build Triggers** section and make sure to check **Poll SCM**
 5.  In the **Schedule** field, add a cron-job-compatible pattern. [crontab.guru]{ target="_blank" rel="nofollow" } can be used to create one.  
-    Please keep the frequency of polls to a reasonable number such as every 15 minutes (`H/15 * * * *`)
+    Please keep the frequency of polls to a reasonable number such as every 15 minutes (`H/15 * * * *`). Cron jobs that make excessive calls will be removed.
     
     /// tip
     `H` should be used instead of `*` when defining a interval for the polling.
