@@ -83,7 +83,7 @@ plugins {
 // Other content (Group, version, ...)
 
 publishing {
-    publication {
+    publications {
         mavenJava(MavenPublication) {
             groupId = project.group
             artifactId = "projectname"
