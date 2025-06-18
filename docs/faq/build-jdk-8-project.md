@@ -1,12 +1,12 @@
-# How do I build a Maven Project with JDK 8?
+# How do I build a Maven Project with JDK 8/11?
 
-Jenkins dropped official support for JDK 8 Maven builds. To still build projects using this Java version, you can either use our custom Maven plugin to select a JDK Toolchain based on your `maven-compiler-plugin` settings, or cross-compile with a newer JDK Version.
+Jenkins dropped official support for JDK 8/11 Maven builds. To still build projects using this Java version, you can either use our custom Maven plugin to select a JDK Toolchain based on your `maven-compiler-plugin` settings, or cross-compile with a newer JDK Version.
 
 ## Toolchain Plugin
 
-Our custom Maven Plugin can select a toolchain (e.g. JDK 8) during the build process. For this, the following workaround is required:
+Our custom Maven Plugin can select a toolchain (e.g. JDK 8/11) during the build process. For this, the following workaround is required:
 
-1.  Set the JDK version to JDK 11.
+1.  Set the JDK version to JDK 17.
 2.  Add the following maven goal to the command line:  
     `io.codemc.maven.plugins.toolchain:codemc-toolchain-selector:0.0.2-SNAPSHOT:select`
 
