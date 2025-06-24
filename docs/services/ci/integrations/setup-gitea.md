@@ -43,11 +43,11 @@ After completing the above steps, head over to your Gitea/Forgejo repository and
 If you don't need to have builds made when a commit is pushed, periodic builds can be used instead to check your repository for changes and build those regularly.
 
 1.  Login to your account on `https://ci.codemc.io` if you haven't already.
-2.  Head over to your project on CodeMC and open the settings by clicking :octicons-gear-24: **Configure**.
-3.  Under :octicons-git-branch-24: **Source Code Management** make sure that **Git** is selected and that the URL to your repository is configured under **Repository URL**
+2.  Head over to your project on CodeMC and open the settings by clicking :jenkins-settings: **Configure**.
+3.  Under :jenkins-source-code-management: **Source Code Management** make sure that **Git** is selected and that the URL to your repository is configured under **Repository URL**
     - Make sure that **Branch Specifier (blank for 'any')** is set to the default branch of your repository (Usually `*/master` or `*/main`).
     - *Optional:* Under **Additional Behaviours** press the **Add** button and add **Polling ignores commits in certain paths** to add settings to define paths that should be included or excluded during a poll.
-4.  Scroll down to the **Build Triggers** section and make sure to check **Poll SCM**
+4.  Scroll down to the :jenkins-timer: **Triggers** section and make sure to check **Poll SCM**
 5.  In the **Schedule** field, add a cron-job-compatible pattern. [crontab.guru]{ target="_blank" rel="nofollow" } can be used to create one.  
     Please keep the frequency of polls to a reasonable number such as every 15 minutes (`H/15 * * * *`). Cron jobs that make excessive calls will be removed.
     
