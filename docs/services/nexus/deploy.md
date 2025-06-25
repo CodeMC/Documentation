@@ -17,8 +17,8 @@ You first need to login to your CodeMC Account and head towards the project you 
 How you configure your project is slightly different depending on the build manager you use.
 
 /// tab | :simple-gradle: Gradle (Freestyle Project)
-1.  Press the :octicons-gear-16: **Configure** button on the left-hand side.
-2.  Scroll to the **Build Environment** Section and press **Use secret text(s) or file(s).
+1.  Press the :jenkins-settings: **Configure** button on the left-hand side.
+2.  Scroll to the :jenkins-environment: **Environment** Section and press **Use secret text(s) or file(s)**.
 3.  In the appearing sub-menu, press **Add** and select **Username and password (separated)**
 4.  For the **Username Variable** and **Password Variable** text boxes, set a fitting name to use.
     
@@ -27,7 +27,7 @@ How you configure your project is slightly different depending on the build mana
     ////
     
 5.  Set **Credentials** to **nexus-repository** if it isn't selected already.
-6.  Move to the **Build** Section.
+6.  Move to the :jenkins-settings: **Build** Section.
     - Should you not have any Build settings yet, follow these steps:
         - Press **Add build step** and select **Invoke Gradle script**.
         - Press **Use Gradle Wrapper** and make sure that **Make gradlew executable** is checked.
@@ -39,7 +39,7 @@ How you configure your project is slightly different depending on the build mana
 /// tab | :simple-apachemaven: Maven
 Unlike Gradle does Maven not require any particular preparations, as the Jenkins service will automatically inject the required username and password from its global configuration to use.
 
-Should you not have a Build task yet in your **Build** section, follow these steps:
+Should you not have a Build task yet in your :jenkins-settings: **Build** section, follow these steps:
 
 1. Change **Maven Version** to that of your project's and set **Root POM** to the path to your main `pom.xml` file (Usually just `pom.xml`).
 2. In the **Goals and options** field, put `clean install deploy`. You may add additional tasks if needed.
