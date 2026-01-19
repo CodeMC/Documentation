@@ -28,6 +28,12 @@ This section of the Wiki contains common questions you may have.
     
     Information on how you can utilize the NMS Repository of CodeMC in your projects.
 
+-   ### [How to use the Hytale Repository?](using-hytale-repository.md)
+    
+    ----
+    
+    Information on how you can utilize the Hytale Repository of CodeMC in your projects.
+
 -   ### [How do I build a Maven Project with JDK 8/11?](build-jdk-8-project.md)
     
     ----
