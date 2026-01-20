@@ -19,6 +19,7 @@ nav:
     - faq/cannot-access-folders.md
     - faq/using-nms-repository.md
     - faq/build-jdk-8-project.md
+    - faq/using-hytale-repository.md
   - Services:
     - services/index.md
     - CI:
